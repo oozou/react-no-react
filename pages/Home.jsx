@@ -1,3 +1,11 @@
 import React from "react";
+import { useScripts } from "../src/useScripts";
 
-export default () => <h1>Home Page</h1>;
+import "./Home.css";
+
+const Home = () => {
+  useScripts([() => import("../src/home")]);
+  return <h1 id="home">Home Page</h1>;
+};
+
+export default Home;
